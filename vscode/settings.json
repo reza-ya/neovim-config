@@ -1,0 +1,7 @@
+
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\R.Yari.ISQI\\AppData\\Local\\nvim\\init.lua",
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "off"
+}

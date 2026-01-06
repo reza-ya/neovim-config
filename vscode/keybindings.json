@@ -1,0 +1,58 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "space f f",
+        "command": "workbench.action.quickOpen",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "space g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "space g r",
+        "command": "editor.action.goToReferences",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "space g i",
+        "command": "editor.action.goToImplementation",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "space g y",
+        "command": "editor.action.goToTypeDefinition",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "space r n",
+        "command": "editor.action.rename",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "workbench.action.navigateBack",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "ctrl+i",
+        "command": "workbench.action.navigateForward",
+        "when": "editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        "when": "editorTextFocus && suggestWidgetVisible && neovim.mode == 'insert'"
+    },
+    {
+        "key": "shift+tab",
+        "command": "selectPrevSuggestion",
+        "when": "editorTextFocus && suggestWidgetVisible && neovim.mode == 'insert'"
+    },
+    {
+        "key": "tab",
+        "command": "tab",
+        "when": "editorTextFocus && !suggestWidgetVisible && neovim.mode == 'insert'"
+    }
+]
