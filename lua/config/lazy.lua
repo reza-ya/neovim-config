@@ -28,6 +28,17 @@ if vim.g.vscode then
     
     -- Custom VS Code Keybindings
     vim.keymap.set('n', '<Leader>f', "<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>")
+    vim.g.mapleader = " "
+
+    -- Map <leader>ff to VS Code Quick Open (Search Files)
+    vim.keymap.set('n', '<leader>ff', function()
+        require('vscode').action('workbench.action.quickOpen')
+    end)
+
+    -- Optional: Map <leader>fw to search TEXT across files (Grep)
+    vim.keymap.set('n', '<leader>fw', function()
+        require('vscode').action('workbench.action.findInFiles')
+    end)
 else
     -- Use imports (NOT require)
 require("lazy").setup({
