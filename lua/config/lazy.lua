@@ -15,8 +15,22 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-
--- Use imports (NOT require)
+if vim.g.vscode then
+    -- VS Code specific settings
+    -- Only load "logic" plugins like nvim-surround or nvim-autopairs
+    require("lazy").setup({
+      spec = {
+        { "windwp/nvim-autopairs", config = true },
+        { "kylechui/nvim-surround", config = true },
+        -- DO NOT load Telescope, Lualine, or Treesitter here
+      }
+    })
+    
+    -- Custom VS Code Keybindings
+    vim.keymap.set('n', '<Leader>f', "<Cmd>call VSCodeNotify('workbench.action.quickOpen')<CR>")
+else
+    -- Use imports (NOT require)
 require("lazy").setup({
   { import = "plugins" },
 })
+end
